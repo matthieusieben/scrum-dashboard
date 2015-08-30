@@ -152,6 +152,14 @@ exports.register = function (server, options, next) {
     points: 1,
   };
 
+  stories[13] = {
+    id: 13,
+    title: 'Enforce story status flow (todo > in progress > complete)',
+    status: STORY_STATUS.TODO,
+    sprint: null,
+    points: 1,
+  };
+
   return next();
 
   function parseDate (timestamp) {
