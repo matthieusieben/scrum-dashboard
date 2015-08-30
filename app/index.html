@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="scrum-dashboard">
+<head>
+  <title>Scrum backend</title>
+
+  <style type="text/css">
+    [ng-cloak] {
+      display: none;
+    }
+  </style>
+  <link href="components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="components/font-awesome/css/font-awesome.css" rel="stylesheet">
+  <link href="src/board/styles.css" rel="stylesheet">
+
+</head>
+<body ng-cloak>
+
+  <div class="container-fluid" ng-view></div>
+
+  <script src="components/angular/angular.js"></script>
+  <script src="components/angular-resource/angular-resource.js"></script>
+  <script src="components/angular-route/angular-route.js"></script>
+  <script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="components/ngDraggable/ngDraggable.js"></script>
+
+  <script src="src/api/index.js"></script>
+  <script src="src/api/sprint.service.js"></script>
+  <script src="src/api/story.service.js"></script>
+
+  <script src="src/board/index.js"></script>
+  <script src="src/board/board.controller.js"></script>
+  <script src="src/board/sprint.directive.js"></script>
+  <script src="src/board/story.directive.js"></script>
+  <script src="src/board/story-create.modal.js"></script>
+  <script src="src/board/story-select.modal.js"></script>
+  <script src="src/board/story-status-name.filter.js"></script>
+  
+  <script src="src/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+<div class="story panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <i class="fa" ng-class="{
+        'fa-bug': vm.STATUS.TODO === story.status,
+        'fa-cog fa-spin': vm.STATUS.IN_PROGRESS === story.status,
+        'fa-check-square-o': vm.STATUS.COMPLETE === story.status,
+      }"></i>
+      {{ story.title }}
+      #{{ story.id }}</h4>
+  </div>
+</div>

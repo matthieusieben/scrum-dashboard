@@ -1,0 +1,23 @@
+{
+  "name": "scrum-dashboard",
+  "version": "0.0.1",
+  "homepage": "https://github.com/matthieusieben/scrum-dashboard",
+  "authors": [
+    "Matthieu Sieben <matthieu.sieben@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/components/"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "angular-bootstrap": "~0.13.3",
+    "angular-resource": "~1.4.5",
+    "angular-route": "~1.4.5",
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.4.0",
+    "ngDraggable": "~0.1.8"
+  }
+}

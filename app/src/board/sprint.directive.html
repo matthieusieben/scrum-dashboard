@@ -1,0 +1,10 @@
+<div class="sprint panel panel-primary">
+  <div class="panel-heading">
+    <h4 class="panel-title">Scrum sprint #{{ sprint.id }}</h4>
+  </div>
+  <div class="panel-body">
+    <span class="dates" ng-if="sprint.startDate && sprint.endDate">
+      {{ sprint.startDate | date:'shortDate' }}-{{ sprint.endDate | date:'shortDate' }}
+    </span>
+  </div>
+</div>
