@@ -2,7 +2,7 @@
   z-index: 10;
 }
 
-.board ul {
+ul.stories {
   z-index: 0;
   list-style: none;
   padding: 0;

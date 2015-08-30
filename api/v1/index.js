@@ -54,6 +54,7 @@ exports.register = function (server, options, next) {
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     status: STORY_STATUS.IN_PROGRESS,
     sprint: 0,
+    points: 1,
   };
 
   stories[1] = {
@@ -62,6 +63,7 @@ exports.register = function (server, options, next) {
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     status: STORY_STATUS.TODO,
     sprint: 0,
+    points: 2,
   };
 
   stories[2] = {
@@ -70,6 +72,7 @@ exports.register = function (server, options, next) {
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     status: STORY_STATUS.TODO,
     sprint: null,
+    points: 2,
   };
 
   return next();

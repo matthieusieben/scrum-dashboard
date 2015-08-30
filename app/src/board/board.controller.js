@@ -50,17 +50,17 @@
         templateUrl: 'src/board/story-select.modal.html',
         controller: 'StorySelectController',
         controllerAs: 'vm',
-        scope: $scope,
-        resolve: {
-          // Load unplanned stories
+        // Load unplanned stories
+        // https://github.com/angular-ui/bootstrap/issues/4309
+        /* resolve: {
           _stories: Story.query({ sprint: '', status: Story.STATUS.TODO }).$promise,
-        },
+        }, */
       }).result.then(function (story) {
         story.sprint = vm.sprint.id;
         return story.$save().then(function () {
           vm.stories.push(story);
-        });
-      }).catch(errorHandler);
+        }, errorHandler);
+      });
     }
 
     function createStory () {

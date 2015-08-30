@@ -7,6 +7,8 @@
         'fa-check-square-o': vm.STATUS.COMPLETE === story.status,
       }"></i>
       {{ story.title }}
-      #{{ story.id }}</h4>
+      #{{ story.id }}
+      <span class="badge pull-right" ng-if="story.points">{{ story.points }}</span>
+    </h4>
   </div>
 </div>

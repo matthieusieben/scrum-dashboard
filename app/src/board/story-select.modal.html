@@ -3,9 +3,12 @@
   <h4 class="modal-title">Select a story to add to the sprint</h4>
 </div>
 <div class="modal-body">
-  <ul>
+  <ul class="stories" ng-if="vm.stories.length > 0">
     <li ng-repeat="story in vm.stories" ng-click="$close(story)" scrum-story="story"></li>
   </ul>
+  <p ng-if="vm.stories.length === 0">
+    There are no un-planned stories.
+  </p>
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-default" ng-click="$dismiss()">Cancel</button>

@@ -4,10 +4,12 @@
 
   angular.module('scrum-dashboard-board').controller('StorySelectController', StorySelectController);
 
-  function StorySelectController($modalInstance, _stories) {
+  function StorySelectController($modalInstance, Story) {
     var vm = this;
 
-    vm.stories = _stories;
+    Story.query({ sprint: '', status: Story.STATUS.TODO }).$promise.then(function (stories) {
+      vm.stories = stories;
+    });
   }
 
 })(window.angular);

@@ -2,6 +2,19 @@
 
 <div scrum-sprint="board.sprint"></div>
 
+<div class="row">
+  <div class="col-sm-12">
+    <button class="btn" ng-click="board.createStory()">
+      <i class="fa fa-plus-circle add-story"></i>
+      Create a story
+    </button>
+    <button class="btn" ng-click="board.addStory()">
+      <i class="fa fa-plus-circle add-story"></i>
+      Add a story
+    </button>
+  </div>
+</div>
+
 <div class="row board">
   <div ng-repeat="(statusName, statusCode) in ::board.STATUS" class="col-sm-4 status {{:: statusName.toLowerCase() }}">
 
@@ -9,35 +22,14 @@
       {{:: statusName | storyStatusName }}
     </h3>
 
-    <ul ng-drop="true"
+    <ul class="stories"
+        ng-drop="true"
         ng-drop-success="board.updateStatus($data, statusCode)">
       <li ng-repeat="story in board.stories | filter:{ status: statusCode }"
           ng-drag="true"
           ng-drag-data="story"
           ng-center-anchor="true"
           scrum-story="::story">
-      </li>
-
-      <!-- Buttons -->
-      <li ng-if="statusName === 'TODO'" ng-click="board.addStory()">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <i class="fa fa-plus-circle add-story"></i>
-              Add a story
-            </h4>
-          </div>
-        </div>
-      </li>
-      <li ng-if="statusName === 'TODO'" ng-click="board.createStory()">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <i class="fa fa-plus-circle add-story"></i>
-              Create a story
-            </h4>
-          </div>
-        </div>
       </li>
     </ul>
 
