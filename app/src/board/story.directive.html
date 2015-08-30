@@ -1,6 +1,7 @@
 <div class="story panel panel-default">
   <div class="panel-heading">
     <h4 class="panel-title">
+      <span class="badge pull-right" ng-if="story.points">{{ story.points }}</span>
       <i class="fa" ng-class="{
         'fa-bug': vm.STATUS.TODO === story.status,
         'fa-cog fa-spin': vm.STATUS.IN_PROGRESS === story.status,
@@ -8,7 +9,6 @@
       }"></i>
       {{ story.title }}
       #{{ story.id }}
-      <span class="badge pull-right" ng-if="story.points">{{ story.points }}</span>
     </h4>
   </div>
 </div>

@@ -50,26 +50,71 @@ exports.register = function (server, options, next) {
 
   stories[0] = {
     id: 0,
-    title: 'Initially planned story A',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    status: STORY_STATUS.IN_PROGRESS,
-    sprint: 0,
-    points: 1,
+    title: 'Allow insterface translation',
+    status: STORY_STATUS.TODO,
+    sprint: null,
+    points: 2,
   };
 
   stories[1] = {
     id: 1,
-    title: 'Initially planned story B',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    title: 'Fix date filter in "scrumSprint" directive',
     status: STORY_STATUS.TODO,
     sprint: 0,
-    points: 2,
+    points: 1,
   };
 
   stories[2] = {
     id: 2,
-    title: 'Initially not planned story',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    title: 'Add user management system',
+    status: STORY_STATUS.TODO,
+    sprint: 0,
+    points: 5,
+  };
+
+  stories[3] = {
+    id: 3,
+    title: 'Add burndown chart',
+    status: STORY_STATUS.TODO,
+    sprint: 0,
+    points: 3,
+  };
+
+  stories[4] = {
+    id: 4,
+    title: 'Validate user input (server side)',
+    status: STORY_STATUS.TODO,
+    sprint: 0,
+    points: 3,
+  };
+
+  stories[5] = {
+    id: 5,
+    title: 'Use Mongo DB',
+    status: STORY_STATUS.TODO,
+    sprint: null,
+    points: 3,
+  };
+
+  stories[6] = {
+    id: 6,
+    title: 'Add sprint management interface',
+    status: STORY_STATUS.TODO,
+    sprint: null,
+    points: 2,
+  };
+
+  stories[7] = {
+    id: 7,
+    title: 'Create "story details" view',
+    status: STORY_STATUS.TODO,
+    sprint: null,
+    points: 2,
+  };
+
+  stories[8] = {
+    id: 8,
+    title: 'Improve story directive',
     status: STORY_STATUS.TODO,
     sprint: null,
     points: 2,
