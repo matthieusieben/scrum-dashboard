@@ -3,7 +3,40 @@
   <h4 class="modal-title">Create a new story</h4>
 </div>
 <div class="modal-body">
-  aze 
+  <form class="form-horizontal" name="storyCreationForm">
+    <div class="form-group">
+      <label for="storyTitle" class="col-sm-2 control-label">Title</label>
+      <div class="col-sm-10">
+        <input class="form-control" id="storyTitle" placeholder="Title" ng-model="vm.data.title" ng-required="true">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="storyPoints" class="col-sm-2 control-label">Points</label>
+      <div class="col-sm-10">
+        <select id="storyPoints" class="form-control"
+                ng-model="vm.data.points"
+                ng-required="true"
+                ng-options="points for points in [ 1, 2, 3, 5 ]">
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="storyDescription" class="col-sm-2 control-label">Description</label>
+      <div class="col-sm-10">
+        <textarea id="storyDescription" class="form-control" ng-model="vm.data.description" placeholder="Description">
+        </textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" ng-model="vm.data.addToSprint"> Add to current sprint
+          </label>
+        </div>
+      </div>
+    </div>
+  </form>
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-default" ng-click="$dismiss()">Cancel</button>

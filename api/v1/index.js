@@ -108,8 +108,9 @@ exports.register = function (server, options, next) {
                   return false;
                 }
                 break;
-              case 'object':
-                if (story[name] === null && request.query[name]) {
+              case 'object': // null
+              case 'undefined':
+                if (!story[name] && request.query[name]) {
                   return false;
                 }
                 break;
@@ -138,7 +139,6 @@ exports.register = function (server, options, next) {
         if (typeof request.payload !== 'object') {
           return reply(Boom.badData('Payload expected to be an object.'));
         }
-
         var story = request.payload;
         story.id = getNextItemId();
         store[story.id] = story;

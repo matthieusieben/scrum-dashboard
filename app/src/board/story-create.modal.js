@@ -7,7 +7,12 @@
   function StoryCreateController() {
     var vm = this;
 
-    vm.data = {};
+    vm.data = {
+      points: 1,
+      title: '',
+      description: '',
+      addToSprint: false,
+    };
   }
 
 })(window.angular);

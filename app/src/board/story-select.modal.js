@@ -4,7 +4,7 @@
 
   angular.module('scrum-dashboard-board').controller('StorySelectController', StorySelectController);
 
-  function StorySelectController($modalInstance, Story) {
+  function StorySelectController(Story) {
     var vm = this;
 
     Story.query({ sprint: '', status: Story.STATUS.TODO }).$promise.then(function (stories) {

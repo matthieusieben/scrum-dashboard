@@ -71,9 +71,16 @@
         scope: $scope,
       }).result.then(function (data) {
         var story = new Story(data);
-        story.sprint = vm.sprint.id;
+        var addToSprint = data.addToSprint;
+        story.status = Story.STATUS.TODO;
+        if (addToSprint) {
+          delete data.addToSprint;
+          story.sprint = vm.sprint.id;
+        }
         return story.$save().then(function () {
-          vm.stories.push(story);
+          if (addToSprint) {
+            vm.stories.push(story);
+          }
         });
       }).catch(errorHandler);
     }
