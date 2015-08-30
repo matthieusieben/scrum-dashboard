@@ -14,3 +14,7 @@ ul.stories {
   margin: -2px;
   border: 2px dashed #ccc;
 }
+
+.story {
+  user-select: none;
+}
