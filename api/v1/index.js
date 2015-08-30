@@ -59,7 +59,7 @@ exports.register = function (server, options, next) {
   stories[1] = {
     id: 1,
     title: 'Fix date filter in "scrumSprint" directive',
-    status: STORY_STATUS.TODO,
+    status: STORY_STATUS.IN_PROGRESS,
     sprint: 0,
     points: 1,
   };
@@ -118,6 +118,38 @@ exports.register = function (server, options, next) {
     status: STORY_STATUS.TODO,
     sprint: null,
     points: 2,
+  };
+
+  stories[9] = {
+    id: 9,
+    title: 'Document code properly (ngDocs)',
+    status: STORY_STATUS.TODO,
+    sprint: 0,
+    points: 2,
+  };
+
+  stories[10] = {
+    id: 10,
+    title: 'Grunt/Gulp in order to build a minified version',
+    status: STORY_STATUS.TODO,
+    sprint: 0,
+    points: 2,
+  };
+
+  stories[11] = {
+    id: 11,
+    title: 'Offline mode: create a cache manifest',
+    status: STORY_STATUS.TODO,
+    sprint: null,
+    points: 1,
+  };
+
+  stories[12] = {
+    id: 12,
+    title: 'User feedback for errors (popup when "error" emitted on nv-view\'s $scope)',
+    status: STORY_STATUS.TODO,
+    sprint: null,
+    points: 1,
   };
 
   return next();
